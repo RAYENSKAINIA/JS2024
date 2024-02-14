@@ -1,0 +1,92 @@
+
+function max2(a,b)
+{
+    if (a>b)
+    return a
+else
+return b
+
+}
+console.log(max2(5,5))
+console.log(max2(15,5))
+console.log(max2(15,15))
+
+
+
+
+function direbonjour(){
+
+    console.log("Bonjour")
+}
+direbonjour()
+
+
+
+function additionnerInputs() {
+    
+    const a = parseFloat(prompt("Entrez le premier nombre :"));
+    const b = parseFloat(prompt("Entrez le deuxième nombre :"));
+
+    const somme = a + b;
+
+       
+        onsole.log(`La somme de ${a} et ${b} est égale à ${somme}.`);
+    
+}
+
+
+additionnerInputs();
+
+
+function into() {
+    document.getElementById("zone").innerText = "enter";
+}
+
+function out() {
+    document.getElementById("zone").innerText = "out";
+}
+
+function bgColor() {
+    document.getElementById("zone").style.backgroundColor = "lightblue";
+}
+
+document.getElementById("zone").onmousemove = into;
+document.getElementById("zone").onmouseout = out;
+document.getElementById("zone").onkeydown = bgColor;
+
+
+//# 1 #
+console.log("Exercice 1 : ");
+console.log(isString('hello65656')); 
+console.log(isString([1,6,9])); 
+console.log(isString(5)); 
+console.log(isString("Is54545et")); 
+
+//# 2 #
+function isBlank(input) {
+    return input.trim() === "";
+}
+console.log(isBlank('')); // true
+console.log(isBlank('hjhjh')); // false
+
+//# 3 #
+function stringToArray(str) {
+    return str.split(" ");
+}
+console.log(stringToArray("ISET Tataouine 2023 Groupe1er")); // ["ISET", "Tataouine", "2023"]
+
+//# 4 #
+function extractString(str1, length) {
+    return str1.slice(0, length);
+}
+console.log(extractString("Robin Singh",4)); 
+console.log(extractString("ISET Tataouine",7)); 
+
+//# 5 #
+function protectEmail(user_email) {
+    const atIndex = user_email.indexOf('@');
+    const prefix = user_email.slice(0, atIndex);
+    const hiddenEmail = prefix.slice(0, Math.max(1, Math.floor(prefix.length / 2))) + "..." + user_email.slice(atIndex);
+    return hiddenEmail;
+}
+console.log(protectEmail("isettataouine@gmail.com")); 
